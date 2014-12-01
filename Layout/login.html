@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Library Management</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    
+
+</head>
+<body  id="shadowing">
+<!-- Body -->
+	<div class="container-fluid">
+	<div class="row">
+	<div class="col-sm-12 col-md-12">
+		<div class="row">
+			<div style="width: 500px; background-color: transparent !important;" id="setup">
+				<div class="panel panel-primary" style="margin-bottom: 0px !important; ">
+					<div class="panel-heading text-center bold"><b>Library Management Login</b></div>
+	<!-- Login -->				
+					<div class="panel-body">
+						<form role="form" name="signIn">
+							<div class="form-group">
+								<label>Your Username</label>
+								<input type="text" class="form-control" placeholder="Enter your username" tabindex="1" name="username" >
+								<p class="help-block">Check input in Client Side using Javascript</p>
+							</div>
+							<div class="form-group">
+								<label>Your Password</label>
+								<input type="password" class="form-control" placeholder="Enter your password" tabindex="2" name="password" >
+								<p class="help-block">Check input in Client Side using Javascript</p>
+							</div>
+							<div style="float: right">
+							<!-- Just available when username and password corrected -->
+								<button class="btn btn-primary disabled">Login</button>
+								<button class="btn btn-primary" type="reset">Reset</button>
+							</div>
+							<div style="color: red">Server Message (Login False)</div>
+							<div>
+								<a class="btn" >Forgot Password</a>
+							</div>
+						</form>
+					</div>
+	<!-- Forgot Password -->
+					<div class="panel-body hide">
+						<form role="myForm" name="forgotForm">
+						<!-- has-error glyphicon-remove/ has-warning glyphicon-warning-sign / has-success glyphicon-ok using JS to checkout-->
+							<div class="form-group has-error  has-feedback"">
+								<label>Your Email</label>
+								<input type="text" class="form-control" placeholder="Enter your email" name="email">
+								<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+								<p class="help-block">Check-it-out at Client using JS</p>
+							</div>
+							<div style="float: right">
+								<button class="btn btn-primary">Send Request</button>
+								<button class="btn btn-primary">Cancel</button>
+							</div>
+							<div>
+								<span class="error" style="color: red">Server Message</span>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+			</div>   
+		</div>
+    </div>
+	</div>
+	</div>
+</body>
+</html>

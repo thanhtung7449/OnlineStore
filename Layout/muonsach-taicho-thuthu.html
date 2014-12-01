@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Library Management</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    
+
+</head>
+<body>
+<!-- Header -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><span style="color:white">Library System</span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+                <li><a></a></li>
+                <li><a href="#"><span style="color:white">Trang chủ</span></a></li>
+                <li class="active"><a href="#"><span style="color:white">Đọc giả</span></a></li>
+                <li><a href="#"><span style="color:white">Tài nguyên</span></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            	<li><img class="img-circle" src="images/clerks/VinhPQ - Min.jpg" alt="40x40" style="height:40px; width:40px"></li>
+                <li><a href="#"><strong style="color:white; font-size:14px">Vinh, Phan Quốc</strong></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out" style="color:white"></span></a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- Body -->
+	<div class="container-fluid">
+    <!-- Left Body -->
+    	<div class="row">
+        	<div class="col-sm-3 col-md-2 sidebar" style="background:#FFF">
+            	<div class="row"  style="border-bottom: #e0e2e2 thin solid;">
+                	<ul class="nav nav-sidebar">
+                        <li><a href="#">Thêm đọc giả</a></li>
+                        <li class="active"><a hef="#">Mượn sách</a></li>
+                        <li><a hef="#">Trả sách</a></li>
+                        <li><a hef="#">Gia hạn</a></li>
+                	</ul>
+                </div>
+                <div class="row">
+                   <!-- <iframe scrolling="no" frameborder="no" style="overflow:hidden;border:0;margin:0;padding:0;width:200px;height:200px;"src="http://www.clocklink.com/html5embed.php?clock=006&timezone=ICT&color=blue&size=200&Title=&Message=&Target=&From=2014,1,1,0,0,0&Color=blue"></iframe> -->
+                </div>
+                <div class="row">
+                	<time id="calendarId" class="icon">
+                      <em></em>
+                      <strong></strong>
+                      <span></span>
+                    </time>
+                </div>
+            </div>
+      <!-- Right Body -->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 scrollSlideBar">
+                <div class="row" style="border-bottom: #e0e2e2 thin solid; background:#FAFBFC;">
+                	<div class="col-sm-6 col-md-6">
+                    	<div class="row" style="margin:10px">
+                        	<h1 class="text-primary">Mượn sách tại chổ</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <div class="row" style="margin:10px">
+                        	<h1 style="float:right">
+                                <div class="btn-group">
+                                	<button type="button" class="btn btn-lg btn-success ">Mượn về nhà</button>
+                                    <button type="button" class="btn btn-lg btn-success active">Mượn tại chỗ</button>
+                                </div>
+                            </h1>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="row main" style="border-bottom: #e0e2e2 thin solid;background:#F5F7FA">
+                    <div class="col-sm-3 col-md-3">
+                    	<legend>Thông tin độc giả</legend>
+                    	<div class="row">
+                    		<img class="img-thumbnail centerPicture" src="images/clerks/VinhPQ - Min.jpg" style="max-width:70%; max-height:20%">
+                        </div>
+                        <hr>
+                        <div class="row">
+                        	<form role="form">
+                              <div class="form-group">
+                                <label><h4>Mã số</h4></label>
+                                <input type="text" class="form-control" value="1112389" readonly>
+                              </div>
+                              <div class="form-group">
+                                <label><h4>Họ tên</h4></label>
+                                <input type="text" class="form-control" value="Vinh Phan" readonly>
+                              </div>
+                              <div class="form-group">
+                                <label><h4>Loại đọc giả</h4></label>
+                                <input type="text" class="form-control" value="Sinh viên" readonly>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-md-9" style="padding-left: 40px">
+					<div class="col-sm-12 col-md-12" >
+                    	<div class="row">
+							<form class="form-horizontal">
+								<fieldset>
+									<legend>Thông tin sách</legend>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group" role="form">
+												<label class="col-sm-3 control-label">Mã sách</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" readonly/>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="col-sm-3 control-label">Tên sách</label>
+												<div class="col-sm-9">
+													<input type="text" class="form-control" readonly/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group" role="form">
+												<label class="col-sm-3 control-label">Tình trạng</label>
+												<div class="col-sm-9" >
+													<select class="form-control" disabled>
+													  <option>select....</option>
+													  <option>Được mượn</option>
+													  <option>Đã được đặt</option>
+													  <option>Không được mượn</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="col-sm-3 control-label">Tìm kiếm</label>
+												<div class="col-sm-9">
+													<div class="input-group">
+														<input type="text" class="form-control">
+														<div class="input-group-addon"><a class="glyphicon glyphicon-search text-primary cursorPointer"></a></div>
+													</div>
+												</div>
+											</div>
+											<div style="float:right">
+												<button type="button" class="btn btn-info">Mượn sách</button>
+												<button type="button" class="btn btn-info">Clear</button>
+											</div>	
+										</div>
+									</div>
+								</fieldset>
+							</form>
+                        </div>
+						<div class="row">
+							<form role="form">
+								<fieldset>
+									<legend>Danh sách sách mượn</legend>
+									<table class="table table-striped table-hover">
+										<tr>
+											<th>#</th>
+											<th>Mã sách</th>
+											<th>Tên sách</th>
+											<th>Loại sách</th>
+											<th>Remove</th>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1112389</td>
+											<td>VinhPQ</td>
+											<td>Film</td>
+											<td><i class="glyphicon glyphicon-trash text-primary cursorPointer"></i></td>
+										</tr>
+										 <tr>
+											<td>1</td>
+											<td>1112389</td>
+											<td>VinhPQ</td>
+											<td>Hard Book</td>
+											<td><i class="glyphicon glyphicon-trash text-primary cursorPointer"></i></td>
+										</tr>
+									</table>
+								</fieldset>
+							</form>
+						</div>
+						<div class="row">
+							<form class="form-inline" role="form">
+								<fieldset>
+									<legend>Thông tin phiếu mượn sách</legend>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>Ngày mượn</label>
+											<input type="date" class="form-control" placeholder="Thời gian mượn">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>Thời gian mượn</label>
+											<label><span class="text-danger" style="font-weight: bold;">3</span></label>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+						<br>
+						<br>
+						<div class="row">
+							<div style="float:right">
+								<button type="button" class="btn btn-info">Tạo phiếu</button>
+								<button type="button" class="btn btn-info">Cancel</button>
+							</div>
+						</div>
+                    </div>
+					</div>
+                </div>
+            </div>
+        </div>  
+    </div>   
+    
+<!-- Javascript -->
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    
+    <!-- Final -->
+    <script type="text/javascript" src="js/manage.js"></script>  
+</body>
+</html>

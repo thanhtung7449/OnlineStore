@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-4.1.xsd
+            http://www.springframework.org/schema/tx 
+            http://www.springframework.org/schema/tx/spring-tx-4.1.xsd 
+            http://www.springframework.org/schema/util 
+            http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+	
+	<context:property-placeholder location="classpath:/spring/environment.properties" />
+
+<!-- Load DataSource from Property Files -->	
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close"
+		p:driverClassName="${dataSource.driverClassName}"
+		p:url="${dataSource.url}"
+		p:username="${dataSource.username}"
+		p:password="${dataSource.password}"/>
+		
+<!-- Hibernate Configuration -->
+	<util:properties id="hibernateProperties">
+		<prop key="hibernate.dialect">
+			org.hibernate.dialect.MySQL5InnoDBDialect
+		</prop>
+		<prop key="hibernate.show_sql">false</prop>
+	</util:properties>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+			p:dataSource-ref="dataSource"
+			p:packagesToScan="com.vinhpq.model.pojo"
+			p:hibernateProperties-ref="hibernateProperties"/>
+
+	<bean id="transactionManager" 
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager" 
+          p:sessionFactory-ref="sessionFactory" />	
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+<!-- Declare Bean Services -->
+	<import resource="/hibernate-services.xml"/>
+	
+
+<!-- Scan Component -->
+	<context:component-scan base-package="com.vinhpq.controller"/>
+	<context:component-scan base-package="com.vinhpq.dao"/>
+	<context:component-scan base-package="com.vinhpq.service"/>
+	
+</beans>

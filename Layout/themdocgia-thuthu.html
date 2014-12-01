@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Library Management</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    
+
+</head>
+<body>
+<!-- Header -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><span style="color:white">Library System</span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+                <li><a></a></li>
+                <li><a href="#"><span style="color:white">Trang chủ</span></a></li>
+                <li class="active"><a href="#"><span style="color:white">Đọc giả</span></a></li>
+                <li><a href="#"><span style="color:white">Tài nguyên</span></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            	<li><img class="img-circle" src="images/clerks/VinhPQ - Min.jpg" alt="40x40" style="height:40px; width:40px"></li>
+                <li><a href="#"><strong style="color:white; font-size:14px">Vinh, Phan Quốc</strong></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out" style="color:white"></span></a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- Body -->
+	<div class="container-fluid">
+    <!-- Left Body -->
+    	<div class="row">
+        	<div class="col-sm-3 col-md-2 sidebar" style="background:#FFF">
+            	<div class="row"  style="border-bottom: #e0e2e2 thin solid;">
+                	<ul class="nav nav-sidebar">
+                        <li class="active"><a href="#">Thêm đọc giả</a></li>
+                        <li><a hef="#">Mượn sách</a></li>
+                        <li><a hef="#">Gia hạn</a></li>
+                	</ul>
+                </div>
+                <div class="row">
+                    <iframe scrolling="no" frameborder="no" style="overflow:hidden;border:0;margin:0;padding:0;width:200px;height:200px;"src="http://www.clocklink.com/html5embed.php?clock=006&timezone=ICT&color=blue&size=200&Title=&Message=&Target=&From=2014,1,1,0,0,0&Color=blue"></iframe>
+                </div>
+                <div class="row">
+                	<time id="calendarId" class="icon">
+                      <em></em>
+                      <strong></strong>
+                      <span></span>
+                    </time>
+                </div>
+            </div>
+      <!-- Right Body -->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 scrollSlideBar">
+                <div class="row" style="border-bottom: #e0e2e2 thin solid; background:#FAFBFC">
+                    <div class="col-sm-12 col-md-12" style="margin:10px">
+                        <div class="row">
+                            <h1 class="text-primary">Thông tin đọc giả</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row main" style="border-bottom: #e0e2e2 thin solid;background:#F5F7FA">
+                    <div class="col-sm-4 col-md-3">
+                    	<div class="row">
+                    		<img class="img-thumbnail" src="images/clerks/VinhPQ - Min.jpg" style="max-width:90%; max-height:40%">
+                        </div>
+                        <div class="row" style="padding:5px">
+                        	<div class="col-sm-2">
+                            	<button class="btn btn-primary"><span class="glyphicon glyphicon-trash"></span></button>
+                            </div>
+                            <div class="col-sm-10" >
+                            	<input type="file" style="max-width:100%"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-9">
+                    	<div class="row">
+                    		<form class="form-horizontal" role="form">
+                            	<div class="form-group">
+                                	<label class="control-label col-sm-3">Họ tên</label>
+                                    <div class="col-sm-9">
+                                    	<input class="form-control" type="text" placeholder="hoten"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<label class="control-label col-sm-3">Ngày sinh</label>
+                                    <div class="col-sm-9">
+                                    	<input class="form-control" type="date" placeholder="hoten"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<label class="control-label col-sm-3">Giới tính</label>
+                                    <div class="col-sm-9">
+                                    	<select class="form-control">
+                                          <option>select....</option>
+                                          <option>Nam</option>
+                                          <option>Nữ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<label class="control-label col-sm-3">Email</label>
+                                    <div class="col-sm-9">
+                                    	<div class="input-group">
+                                        	<input type="text" class="form-control" placeholder="Email"/>
+                                            <div class="input-group-addon">@</div>
+                                            <select class="form-control">
+                                            	<option>select....</option>
+                                            	<option>student.hcmus.edu.vn</option>
+                                                <option>fit.hcmus.edu.vn</option>
+                                                <option>gmail.com.vn</option>
+                                                <option>gmail.com</option>
+                                                <option>yahoo.com</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<label class="control-label col-sm-3">CMND</label>
+                                    <div class="col-sm-9">
+                                    	<input type="text" class="form-control" placeholder="Identify Card"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<label class="control-label col-sm-3">Địa chỉ</label>
+                                    <div class="col-sm-9">
+                                    	<div class="col-sm-5 remove-padding-margin">
+                                      		<input type="text" class="form-control" placeholder="Address"/>
+										</div>
+                                        <label class="control-label col-sm-2">Đường</label>
+                                        <div class="col-sm-5 remove-padding-margin">
+                                       		<input type="text" class="form-control" placeholder="Street"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<label class="control-label col-sm-3">Quận/huyện</label>
+                                    <div class="col-sm-9">
+                                    	<div class="col-sm-5 remove-padding-margin">
+                                      		<input type="text" class="form-control" placeholder="Address"/>
+										</div>
+                                        <label class="control-label col-sm-2">Tỉnh/TP</label>
+                                        <div class="col-sm-5 remove-padding-margin">
+                                       		<select class="form-control">
+                                            	<option>Hồ Chí Minh</option>
+                                                <option>Hà Nội</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<label class="control-label col-sm-3">Mã xác thực</label>
+                                    <div class="col-sm-9">
+                                    	<div class="col-sm-5 remove-padding-margin">
+                                        	<input type="text" class="form-control" placeholder="Captcha code"/>
+                                        </div>
+                                        <label class="control-label col-sm-2">Captcha</label>
+                                        <div class="col-sm-5 remove-padding-margin">
+                                        	<div class="input-group">
+                                        		<img class="form-control" src="images/captcha code/W6 8HP.jpg" width="50px" height="34">
+                                           	 	<div class="input-group-addon"><a class="glyphicon glyphicon-refresh cursorPointer"></a></div>
+                                        	</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                	<div class="col-sm-5 col-sm-offset-7">
+                                    	<button type="reset" class="btn btn-lg btn-info" style="float:right; margin-left:10px">Thoát</button>
+                                        <button type="submit" class="btn btn-lg btn-info" style="float:right">Tạo mới</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>   
+    
+<!-- Javascript -->
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    
+    <!-- Final -->
+    <script type="text/javascript" src="js/manage.js"></script>  
+</body>
+</html>

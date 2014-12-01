@@ -1,0 +1,292 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  background:#F5F7FA;
+  overflow:hidden;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+	padding-top:10px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: #e0e2e2 thin solid;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  background-color: #f7f4f4;
+  border-bottom: thick solid #09F;
+  font-weight: bold;
+  
+}
+.nav-sidebar > li{
+  
+}
+.thumbnail > a  > img:hover{
+	border: thick solid #09F;
+}
+
+/* Menu */
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+	color: #fff;
+	font-weight: bold;
+	background-color: #5ccff2;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/*
+*	Calendar
+*/
+
+
+time.icon
+{
+  font-size: 2em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: #fff;
+  margin: 10px auto;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotate(0deg) skewY(0deg);
+  -webkit-transform-origin: 50% 10%;
+  transform-origin: 50% 10%;
+}
+
+time.icon *
+{
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+time.icon strong
+{
+  position: absolute;
+  top: 0;
+  padding: 0.4em 0;
+  color: #fff;
+  background-color: #fd9f1b;
+  border-bottom: 1px dashed #f37302;
+  box-shadow: 0 2px 0 #fd9f1b;
+}
+
+time.icon em
+{
+  position: absolute;
+  bottom: 0.3em;
+  color: #fd9f1b;
+}
+
+time.icon span
+{
+  width: 100%;
+  font-size: 2.8em;
+  letter-spacing: -0.05em;
+  padding-top: 0.8em;
+  color: #2f2f2f;
+}
+
+time.icon:hover, time.icon:focus
+{
+  -webkit-animation: swing 0.6s ease-out;
+  animation: swing 0.6s ease-out;
+}
+
+@-webkit-keyframes swing {
+  0%   { -webkit-transform: rotate(0deg)  skewY(0deg); }
+  20%  { -webkit-transform: rotate(12deg) skewY(4deg); }
+  60%  { -webkit-transform: rotate(-9deg) skewY(-3deg); }
+  80%  { -webkit-transform: rotate(6deg)  skewY(-2deg); }
+  100% { -webkit-transform: rotate(0deg)  skewY(0deg); }
+}
+
+@keyframes swing {
+  0%   { transform: rotate(0deg)  skewY(0deg); }
+  20%  { transform: rotate(12deg) skewY(4deg); }
+  60%  { transform: rotate(-9deg) skewY(-3deg); }
+  80%  { transform: rotate(6deg)  skewY(-2deg); }
+  100% { transform: rotate(0deg)  skewY(0deg); }
+}
+
+/*
+*	Font
+*/
+h1{
+	margin-top:10px;
+	font-weight:bold;
+	font-family: "Times New Roman", Times, serif;
+}	
+
+.remove-padding-margin{
+	padding-left:0px;
+	padding-right:0px;
+	margin:0px;
+}
+
+/*
+*	Hover
+*/
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #c4f1ff;
+}
+
+/*
+*	Cursor
+*/
+.cursorPointer{
+	cursor: pointer;	
+}
+
+/* 
+*	Login
+*/
+#shadowing
+{
+	/*display: none;*/
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:10000;
+	opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#setup 
+{
+	/*display: none;*/
+	position: fixed;
+	top: 20%;
+	left: 35%;
+	//width: 60%;
+	//height: 60%;
+	max-height:400px;
+	padding: 0;
+	margin:0;
+	//border: 1px solid black;
+	background-color: white;
+	z-index:10001;
+	overflow: hidden;
+}
+
+/*
+*	Set Middle Center
+*/
+.centerPicture{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+}
+.centerIcon{
+	text-align:center;
+}
+
+/*
+*	Set Scroll
+*/
+/* Remove this if you want to try $('body').scrollspy(); */
+.scrollSlideBar {
+    height: 627px;	/*	Phai dung JS de config Height cua Screen-NavHeight*/
+    overflow-y: scroll;
+}
+.scrollDiv{
+	height: 356px;
+	overflow-y: scroll;
+}
