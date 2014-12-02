@@ -9,7 +9,7 @@
 	<ul>
 		<c:forEach var="member" items="${memberList}" varStatus="status"> 
 			<li>
-				<a href="member.do?id=${status.index}"> 
+				<a href="member.do?id=${status.index+1}"> 
 					<c:out value="${member}"></c:out>
 				</a>
 			</li>

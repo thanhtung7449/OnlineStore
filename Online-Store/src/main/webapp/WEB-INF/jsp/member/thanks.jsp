@@ -5,7 +5,7 @@
 	<title>Thanks</title>
 </head>
 <body>
-	<h1>Thanks</h1>
+	<h1>Thanks Roster</h1>
 	<p>Thanks for nominating ${nominee}.</p>
 </body>
 </html>

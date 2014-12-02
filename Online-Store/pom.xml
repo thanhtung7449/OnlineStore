@@ -21,11 +21,6 @@
 		<artifactId>spring-beans</artifactId>
 		<version>4.1.1.RELEASE</version>
 	</dependency>
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-aop</artifactId>
-		<version>4.1.1.RELEASE</version>
-	</dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-context</artifactId>
@@ -45,11 +40,6 @@
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
 		<version>4.1.1.RELEASE</version>
-	</dependency>
-	<dependency>
-		<groupId>cglib</groupId>
-		<artifactId>cglib</artifactId>
-		<version>2.2.2</version>
 	</dependency>
 
 <!-- Servlet Lib -->
@@ -138,6 +128,27 @@
 
   </dependencies>
   <build>
-    <finalName>Online-Store</finalName>
+  	<finalName>Online-Store</finalName>
+	<plugins>
+	  <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-dependency-plugin</artifactId>
+	    <executions>
+	      <execution>
+	        <id>copy-dependencies</id>
+	        <phase>package</phase>
+	        <goals>
+	          <goal>copy-dependencies</goal>
+	        </goals>
+	        <configuration>
+	          <outputDirectory>${project.build.directory}/alternateLocation</outputDirectory>
+	          <overWriteReleases>false</overWriteReleases>
+	          <overWriteSnapshots>false</overWriteSnapshots>
+	          <overWriteIfNewer>true</overWriteIfNewer>
+	        </configuration>
+	      </execution>
+	    </executions>
+	  </plugin>
+	</plugins>
   </build>
 </project>

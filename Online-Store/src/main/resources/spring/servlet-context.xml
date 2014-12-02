@@ -5,14 +5,8 @@
 		xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-<!-- Import cấu hình đường dẫn tới Controller -->
-	<import resource="servlet-context.xml"/>
+	<bean name="/member/*" class="com.vinhpq.controller.MemberController"
+			p:thanksViewName="member/thanks"/>
 	
-	
-	
-	
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-			p:prefix="/WEB-INF/jsp/"
-			p:suffix=".jsp"/> 
 	
 </beans>
